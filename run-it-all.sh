@@ -15,14 +15,14 @@ git submodule update --init --recursive --remote
 
 # Build hyades modules
 cd $BASEDIR/hyades
-mvn clean package \
+$BASEDIR/mvnw clean package \
   -Dquarkus.container-image.build=true \
   -Dquarkus.container-image.additional-tags=csaf-local \
   -DskipTests=true
 
 # Build hyades-apiserver
 cd $BASEDIR/hyades-apiserver
-mvn clean package \
+$BASEDIR/mvnw clean package \
   -Pclean-exclude-wars \
   -Penhance \
   -Pembedded-jetty \
