@@ -18,7 +18,8 @@ cd $BASEDIR/hyades
 $BASEDIR/mvnw clean package \
   -Dquarkus.container-image.build=true \
   -Dquarkus.container-image.additional-tags=csaf-local \
-  -DskipTests=true
+  -DskipTests=true \
+  -Dcheckstyle.skip
 
 # Build hyades-apiserver
 cd $BASEDIR/hyades-apiserver
